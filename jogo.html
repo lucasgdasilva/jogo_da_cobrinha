@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobra</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <div class="hud">
+        <a href="index.html" class="btn-menu">Menu</a>
+        <div class="hud-centro">
+            <span class="label-hud">Pontuação</span>
+            <span class="valor-hud">0</span>
+        </div>
+        <div class="hud-direita">
+            <span class="label-hud">Recorde</span>
+            <span class="valor-hud" id="recorde">0</span>
+        </div>
+    </div>
+
+    <div class="arena">
+        <div class="grade" id="grade">
+            <div class="overlay" id="overlay">
+                <div class="overlay-conteudo">
+                    <p class="overlay-titulo" id="overlay-titulo">FIM DE JOGO</p>
+                    <p class="overlay-pontos" id="overlay-pontos">0 pontos</p>
+                    <p class="overlay-recorde" id="overlay-recorde"></p>
+                    <button class="btn-reiniciar" onclick="reiniciar()">Jogar novamente</button>
+                    <a href="index.html" class="btn-voltar">Voltar ao menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controles-smartphone">
+        <div class="linha-controle">
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowUp')">▲</button>
+        </div>
+        <div class="linha-controle">
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowUp')">◀</button>
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowUp')">▼</button>
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowUp')">▶</button>
+        </div>
+    </div>
+    
+</body>
+</html>

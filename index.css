@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
 
 :root {
-    --verde: #4ade80;
-    --verde-escuro: #16a34a;
-    --fundo: #0a0f0a;
-    --fundo-card: #111a11;
-    --borda: #1f3320;
-    --texto: #d1fae5;
-    --esmaecido: #6b7280;
+    --verde: #4ADE80;
+    --verde-escuro: #16A34A;
+    --fundo: #0A0F0A;
+    --fundo-card: #111A11;
+    --borda: #1F3320;
+    --texto: #D1FAE5;
+    --esmaecido: #6B7280;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body {
@@ -22,17 +21,18 @@ body {
     background-color: var(--fundo);
     color: var(--texto);
     min-height: 100vh;
-    background-image: 
+    background-image:
         radial-gradient(ellipse at 20% 20%, rgba(74, 222, 128, 0.06) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 80%, rgba(22, 163, 74, 0.05) 0%, transparent 60%);
 }
 
+/*NAVBAR*/
 .navbar {
     background: rgba(10, 15, 10, 0.9);
     border-bottom: 1px solid var(--borda);
     backdrop-filter: blur(8px);
 }
-    
+
 .navbar-brand {
     font-family: "Press Start 2P", monospace;
     font-size: 0.85rem !important;
@@ -45,6 +45,7 @@ body {
     color: var(--esmaecido);
 }
 
+/*TÍTULO*/
 .titulo-jogo {
     font-family: "Press Start 2P", monospace;
     font-size: clamp(2rem, 8vw, 3.5rem) !important;
@@ -52,12 +53,23 @@ body {
     text-shadow:
         0 0 20px rgba(74, 222, 128, 0.5),
         0 0 60px rgba(74, 222, 128, 0.2);
-        line-height: 1.2;
-        letter-spacing: 4px;
+    line-height: 1.2;
+    letter-spacing: 4px;
 }
 
-.card-recorde, .card-instrucoes {
+.subtitulo {
+    color: var(--esmaecido);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/*CARDS*/
+.card-recorde,
+.card-instrucoes {
     background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    color: var(--texto);
 }
 
 .label-card {
@@ -80,6 +92,7 @@ body {
     opacity: 0.8;
 }
 
+/*DIFICULDADE*/
 .label-secao {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -92,19 +105,19 @@ body {
     border-color: var(--borda);
     color: var(--esmaecido);
     font-weight: 600;
-    font-size: 0.85 rem;
+    font-size: 0.85rem;
     padding: 10px;
     transition: all 0.2s;
 }
 
 .btn-check:checked + .btn-outline-dif {
-    background: var(--verde-escuro) !important;
-    border-color: var(--verde) !important;
-    color: white !important;
+    background: var(--verde-escuro);
+    border-color: var(--verde);
+    color: #FFFFFF;
 }
 
 .btn-outline-dif:hover {
-    background: #1a2e1a !important;
+    background: #1A2E1A !important;
     border-color: var(--verde) !important;
     color: var(--verde) !important;
 }
@@ -113,7 +126,7 @@ body {
     font-family: "Press Start 2P", monospace;
     font-size: 0.85rem;
     background: var(--verde);
-    color: #0a0f0a;
+    color: #0A0F0A;
     border: none;
     border-radius: 10px;
     padding: 16px;
@@ -125,14 +138,15 @@ body {
 }
 
 .btn-jogar:hover {
-    background: #86efac;
-    color: #0a0f0a;
+    background: #86EFAC;
+    color: #0A0F0A;
     box-shadow: 0 0 40px rgba(74, 222, 128, 0.5);
     transform: translateY(-2px);
 }
 
+/*INSTRUÇÕES*/
 .instrucao-item {
-    background: #0f1a0f;
+    background: #0F1A0F;
     border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 8px 12px;

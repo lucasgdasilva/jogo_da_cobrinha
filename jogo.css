@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
 
 :root {
-    --verde: #4ade80;
-    --verde-escuro: #16a34a;
-    --verde-cabeca: #86efac;
-    --comida: #f81771;
-    --fundo: #0a0f0a;
-    --fundo-grade: #0d140d;
-    --borda: #1f3320;
-    --texto: #d1fae5;
-    --esmaecido: #6b7280;
+    --verde: #4ADE80;
+    --verde-escuro: #16A34A;
+    --verde-cabeca: #86EFAC;
+    --comida: #F87171;
+    --fundo: #0A0F0A;
+    --fundo-grade: #0D140D;
+    --borda: #1F3320;
+    --texto: #D1FAE5;
+    --esmaecido: #6B7280;
     --tamanho-celula: 28px;
     --colunas: 20;
 }
@@ -34,7 +34,7 @@ body {
 
 .hud {
     width: 100%;
-    max-width: calc(var(--tamanho-celula)*var(--colunas)+4px);
+    max-width: calc(var(--tamanho-celula) * var(--colunas) + 4px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +58,8 @@ body {
     border-color: var(--verde);
 }
 
-.hud-centro, .hud-direita {
+.hud-centro,
+.hud-direita {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +73,7 @@ body {
 }
 
 .valor-hud {
-    font-family: "Press Start 2P";
+    font-family: "Press Start 2P", monospace;
     font-size: 1rem;
     color: var(--verde);
     line-height: 1.4;
@@ -91,8 +92,39 @@ body {
     border-radius: 4px;
     gap: 1px;
     padding: 1px;
-    background-image: 
+    background-image:
         linear-gradient(var(--borda) 1px, transparent 1px),
         linear-gradient(90deg, var(--borda) 1px, transparent 1px);
     background-size: calc(var(--tamanho-celula) + 1px) calc(var(--tamanho-celula) + 1px);
+}
+
+.celula {
+    width: var(--tamanho-celula);
+    height: var(--tamanho-celula);
+    border-radius: 2px;
+    transition: background-color 0.05s;
+}
+
+.celula.cobra {
+    background-color: var(--verde);
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.4);
+}
+
+.celula.cabeca {
+    background-color: var(--verde-cabeca);
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(134, 239, 172, 0.7);
+}
+
+.celula.comida {
+    background-color: var(--comida);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(248, 113, 113, 0.6);
+    animation: pulsar 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulsar {
+    from {transform: scale(0.85); }
+    to { transform: scale(1.05); }
 }
